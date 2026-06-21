@@ -5,24 +5,16 @@ const app = express();
 app.get('/', (req, res) => res.send('Bot działa!'));
 app.listen(process.env.PORT || 3000);
 
-function connect() {
-  const bot = mineflayer.createBot({
-    host: 'kinkajou.aternos.host',
-    port: 22772,
-    username: 'BotAktywny',
-    version: '1.21.11',
-    skipValidation: true
-  });
+console.log("--- URUCHAMIAM BOTA ---");
 
-  bot.on('spawn', () => console.log("Bot dołączył do gry!"));
-  bot.on('error', (err) => {
-    console.log("BŁĄD BOTA:", err);
-    setTimeout(connect, 10000); // Czekaj 10 sekund przed ponowną próbą
-  });
-  bot.on('kicked', (reason) => {
-    console.log("WYRZUCONO:", reason);
-    setTimeout(connect, 10000);
-  });
-}
+const bot = mineflayer.createBot({
+  host: 'kinkajou.aternos.host:22772', // Sama domena, bez portu na końcu
+  port: 22772,                   // Port podajemy tutaj, oddzielnie
+  username: 'BotAktywny',
+  version: '1.21.11',
+  skipValidation: true
+});
 
-connect();
+bot.on('spawn', () => console.log("Bot jest w grze!"));
+bot.on('error', (err) => console.log("BŁĄD:", err));
+bot.on('kicked', (reason) => console.log("WYRZUCONO:", reason));
