@@ -2,7 +2,8 @@ const mineflayer = require('mineflayer');
 const express = require('express');
 const app = express();
 
-// Serwer HTTP, żeby Render nie uśpił bota
+console.log("--- BOT SIĘ URUCHAMIA ---"); // Dodaj to!
+
 app.get('/', (req, res) => res.send('Bot działa!'));
 app.listen(process.env.PORT || 3000);
 
@@ -10,10 +11,11 @@ const bot = mineflayer.createBot({
   host: 'KakaszkavivalSMP.aternos.me',
   port: 25565,
   username: 'BotAktywny',
-  version: '1.21.11', // Upewnij się, że wersja jest poprawna (w Twoim screenie widziałem 1.21.11, co chyba było literówką)
-  skipValidation: true // To wymusza połączenie bez sprawdzania sesji Mojang
+  version: false,
+  skipValidation: true
 });
 
+console.log("--- PRÓBA POŁĄCZENIA Z SERWEREM ---"); // Dodaj to!
 // Zabezpieczenie przed AFK
 setInterval(() => {
   bot.look(bot.entity.yaw + 1, 0);
