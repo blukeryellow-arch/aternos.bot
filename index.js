@@ -7,10 +7,11 @@ app.get('/', (req, res) => res.send('Bot działa!'));
 app.listen(process.env.PORT || 3000);
 
 const bot = mineflayer.createBot({
-  host: 'KakaszkavivalSMP.aternos.me', // Change it!!!
+  host: 'KakaszkavivalSMP.aternos.me',
   port: 25565,
   username: 'BotAktywny',
-  version: false
+  version: '1.21.11', // Wpisz wersję serwera
+  auth: 'offline'    // <--- DODAJ TO! To pozwala botowi wbić na serwery "Cracked"
 });
 
 // Zabezpieczenie przed AFK
