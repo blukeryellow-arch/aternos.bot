@@ -7,7 +7,7 @@ app.get('/', (req, res) => res.send('Bot działa!'));
 app.listen(process.env.PORT || 3000);
 
 const bot = mineflayer.createBot({
-  host: 'TWOJ_SERWER.aternos.me', // ZMIEŃ NA ADRES SWOJEGO SERWERA
+  host: 'KakaszkavivalSMP.aternos.me', // Change it!!!
   port: 25565,
   username: 'BotAktywny',
   version: false
