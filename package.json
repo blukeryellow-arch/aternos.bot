@@ -2,17 +2,14 @@
   "name": "aternos-bot",
   "version": "1.0.0",
   "main": "index.js",
-"engines": {
+  "engines": {
     "node": ">=22.0.0"
   },
   "dependencies": {
-    "mineflayer": "^4.20.0",
+    "mineflayer": "^4.37.1",
     "express": "^4.18.2"
   },
   "scripts": {
     "start": "node index.js"
   }
 }
-"engines": {
-    "node": ">=22.0.0"
-  },
