@@ -10,8 +10,8 @@ const bot = mineflayer.createBot({
   host: 'KakaszkavivalSMP.aternos.me',
   port: 25565,
   username: 'BotAktywny',
-  version: '1.21.11', // Wpisz wersję serwera
-  auth: 'offline'    // <--- DODAJ TO! To pozwala botowi wbić na serwery "Cracked"
+  version: '1.21.11', // Upewnij się, że wersja jest poprawna (w Twoim screenie widziałem 1.21.11, co chyba było literówką)
+  skipValidation: true // To wymusza połączenie bez sprawdzania sesji Mojang
 });
 
 // Zabezpieczenie przed AFK
