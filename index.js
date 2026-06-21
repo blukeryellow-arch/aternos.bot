@@ -8,7 +8,7 @@ app.listen(process.env.PORT || 3000);
 console.log("--- URUCHAMIAM BOTA ---");
 
 const bot = mineflayer.createBot({
-  host: 'kinkajou.aternos.host:22772', // Sama domena, bez portu na końcu
+  host: 'KakaszkavivalSMP.aternos.me', // Sama domena, bez portu na końcu
   port: 22772,                   // Port podajemy tutaj, oddzielnie
   username: 'BotAktywny',
   version: '1.21.11',
