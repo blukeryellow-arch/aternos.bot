@@ -8,10 +8,10 @@ app.listen(process.env.PORT || 3000);
 console.log("--- BOT SIĘ URUCHAMIA ---");
 
 const bot = mineflayer.createBot({
-  host: 'KakaszkavivalSMP.aternos.me',
-  port: 25565,
+  host: '185.107.193.195', // Zmień na to IP
+  port: 22772,
   username: 'BotAktywny',
-  version: false,
+  version: 1.21.11,
   skipValidation: true
 });
 
